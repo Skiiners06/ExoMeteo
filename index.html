@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Météo</title>
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Obtenez la météo d'une ville Française ! </h1>
+<form>
+    <label>Entrer le nom d'une ville Française : </label>
+    <input type="text" id="liste-Villes" list="listeVille" style="width:200px">
+    <datalist id="listeVille">
+
+    </datalist>
+</form>
+
+<br>
+<br>
+<div class="container">
+    <div class="info">
+
+    </div>
+    <div class="map" id="maCarte">
+
+    </div>
+
+
+
+</div>
+
+
+
+<script src="ajax.js"></script>
+<!-- <script src="miw%20V%2024%2011%202020.js"></script> -->
+
+<script>
+    let carte = L.map('maCarte').setView([46.3630104, 2.9846608],5 );
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(carte);
+
+</script>
+
+</body>
+</html>
+

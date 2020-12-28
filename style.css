@@ -1,0 +1,40 @@
+
+.container{
+    display:flex;
+    width:80%;
+    margin:0 auto;
+}
+
+.info,.map{
+    width:50%;
+    height:500px;
+    border:1px solid black;
+}
+
+.info>p{
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+.info {
+    background-color:lightgray;
+}
+.temp {
+    font-size:18px;
+    background-color:white;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+form{
+    width:500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
